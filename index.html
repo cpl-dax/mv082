@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>QCM Mécanique du vol - 082</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Mécanique du vol (H)</h1>
+    <div id="setup">
+      <p
+        id="total-question-count"
+        style="font-weight: bold; font-size: 18px; margin-bottom: 10px"
+      ></p>
+      <label for="nb-questions">Nombre de questions :</label>
+      <input
+        type="number"
+        class="nb-questions"
+        id="nb-questions"
+        name="nb-questions"
+        min="0"
+      />
+      <div>
+        <button class="start-btn" data-mode="test">Test d'étude</button>
+        <button class="start-btn" data-mode="exam">Examen Blanc</button>
+      </div>
+    </div>
+    <div id="info-bar" class="info-bar" style="display: none">
+      <div id="question-number" class="question-number">
+        Question <span id="nb"></span> / <span id="total"></span>
+      </div>
+      <div class="timer-option">
+        <span id="pause-resume" class="pause-resume" onclick="toggleTimer()">
+          Pause/Reprise
+        </span>
+        <span id="timer" class="timer"></span>
+      </div>
+    </div>
+    <div id="quiz-container" style="display: none"></div>
+    <button id="submit-btn" class="form-btn" style="display: none">Valider</button>
+    <div class="hidden" id="result"></div>
+    <button id="end-btn" class="form-btn" style="display: none">Terminer</button>
+    <button id="restart-btn" class="form-btn" style="display: none">Revenir à l'accueil</button>
+
+    <footer>
+      <div class="promotion">DCI GEND 25 - MDC DE JOUVANCOURT DE CHANNES &amp; GND LEMIERE </div>
+      <div class="promotion">EMA-PRIME 25 - LTN GOITA CHEICK</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
